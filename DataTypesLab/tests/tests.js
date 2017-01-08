@@ -1,6 +1,6 @@
 'use strict'
 
-var chai = require('jasmine');
+var chai = require('jasmine'); 
 
 var myApp = require('../app/library.js');
 
