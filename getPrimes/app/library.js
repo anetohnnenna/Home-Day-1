@@ -1,8 +1,6 @@
 'use strict'
-
-
-
-function getPrimes(num) {
+ 
+ function getPrimes(num) {
   var primes = [2,3];
 
   var checkPrime = function(num) {
@@ -23,9 +21,12 @@ function getPrimes(num) {
     return "negative integers can not be prime";
   }
   else if (num === 1) {
-    return [];  
+    return '1 is not a prime number';  
   }
-  else if ((num === 2) || (num === 3)) {
+  else if (num === 2) {
+    return [2];
+  }
+  else if (num === 3) {
     return primes;
   }
   else {
