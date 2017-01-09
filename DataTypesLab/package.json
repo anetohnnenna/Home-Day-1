@@ -1,0 +1,26 @@
+{
+  "name": "datatypeslab",
+  "version": "1.0.0",
+  "description": "Function to check for the data type of a variable",
+  "main": "app/library.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "a": "^2.1.0",
+    "chai": "^3.5.0",
+    "jasmine": "^2.5.2"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/COOPROTON/Home-Day-1/tree/master/DataTypesLab"
+  },
+  "author": "Bolaji Olajide <cooproton@gmail.com> (http://github.com/cooproton)",
+  "license": "ISC"
+}
