@@ -17,3 +17,7 @@ Solutions to the exercise for the first day of Home Learning at Andela Bootcamp.
 
 - Write a getPrimes function that takes an integer value n as argument and generates prime numbers from 0 to n with asymptotic analysis. The generated prime numbers should be in an array. Your logic should be as efficient as possible (with minimal iterations).
 ```Write your own tests (10 test cases)```
+
+-You are to create a Car class that can be used to instantiate various vehicles.
+It takes in arguments that depict the type, model, and name of the vehicle, provided they are set.
+Let the test guide you to building your Car boiler-plate.

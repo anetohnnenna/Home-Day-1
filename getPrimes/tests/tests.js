@@ -6,9 +6,9 @@ var myApp = require('../app/library.js');
 
 describe("getPrimes tests ", function() {
 
-	describe("Case for booleans", function() {
+	describe("Case for getPrimes function", function() {
 
-	    it("should return true for `true`", function() {
+	    it("should return ", function() {
 	      expect(myApp.getPrimes(true)).toEqual(true);
 	    });
 
