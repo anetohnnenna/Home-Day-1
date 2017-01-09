@@ -1,0 +1,25 @@
+{
+  "name": "getprimes",
+  "version": "1.0.0",
+  "description": "Write a getPrimes function that takes an integer value n as argument and generates prime numbers from 0 to n with asymptotic analysis. The generated prime numbers should be in an array. Your logic should be as efficient as possible (with minimal iterations). Write your own tests (10 test cases)",
+  "main": "app/library.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "jasmine": "^2.5.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "test": "jasmine tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/COOPROTON/Home-Day-1/tree/master/getPrimes"
+  },
+  "author": "Bolaji Olajide <cooproton@gmail.com> (http://github.com/cooproton)",
+  "license": "MIT"
+}

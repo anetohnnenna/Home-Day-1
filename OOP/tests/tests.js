@@ -3,54 +3,56 @@
 
   var chai = require('jasmine'); 
 
-var Car = require('../app/library.JS')
+var Phone = require('../app/library.JS')
 
   describe("Car Class: Create a car, make it drive", function() {
 
-    it("The car should be a type of `object`, and an instance of the `Car` class", function() {
-      var honda = new Car('Honda');
-      expect(typeof honda).toEqual(typeof {});
-      expect(honda instanceof Car).toBeTruthy();
+    it("The phone should be a type of `object`, and an instance of the `Phone` class", function() {
+      var tecno = new Phone('Tecno');
+      expect(typeof tecno).toEqual(typeof {});
+      expect(tecno instanceof Phone).toBeTruthy();
     });
 
-    it("The car should be called 'General' if no name is passed as a parameter", function() {
-      var gm = new Car();
+    it("The phone should be called 'General' if no name is passed as a parameter", function() {
+      var gm = new Phone();
       expect(gm.name).toEqual('General');
       expect(gm.model).toBe('GM');
     });
 
-    it("The car name and model should be a property of the car", function() {
-      var toyota  = new Car('Toyota', 'Corolla');
-      expect(toyota.name).toBe('Toyota');
-      expect(toyota.model).toBe('Corolla');
+    it("The phone name and model should be a property of the phone", function() {
+      var samsung  = new Phone('Samsung', 'J5');
+      expect(samsung.name).toBe('Samsung');
+      expect(samsung.model).toBe('J5');
     });
 
-    it("The car shoud have four (4) doors except its a Porshe or Koenigsegg", function() {
-      var opel  = new Car('Opel', 'Omega 3');
-      expect(opel.numOfDoors).toBe(4);
+    it("The phone should not be a double sim phone except its a Infinix or Tecno", function() {
+      var iPhone  = new Phone('iPhone', 'iPhone 5c', "iOS");
+      expect(iPhone.doubleSim).not.toBe(true);
 
-      var porshe = new Car('Porshe', '911 Turbo');
-      expect(porshe.numOfDoors).toBe(2);
-      porshe.drive(5);
-      expect(porshe.speed).toBe('250 km/h');
-      expect((function(){return new Car('Koenigsegg', 'Agera R');}()).numOfDoors).toBe(2);
+      var tecno = new Phone('Tecno', 'R7');
+      expect(tecno.doubleSim).toBe(true);
+      expect(tecno.isCharging).toBe(false)
+      tecno.charge();
+      expect(tecno.isCharging).toBeTruthy();
+      expect((function(){return new Phone('Infinix', 'Hot S');}()).doubleSim).not.toBe(false);
     });
 
-    it("The car shoud have four (4) wheels except its a type of trailer", function() {
-      var man  = new Car('MAN', 'Truck', 'trailer');
-      expect(man.numOfWheels).toBe(8);
-      expect(man.isSaloon).toBe(false);
-
-      var koenigsegg = new Car('Koenigsegg', 'Agera R');
-      expect(koenigsegg.numOfWheels).toBe(4);
-      expect(koenigsegg.isSaloon).toBeTruthy();
+    it("The phone should be powered off by default until powered on", function() {
+      var iPhone  = new Phone('iPhone', 'iPhone 5c', "iOS");
+      expect(iPhone.isPowerOn).toBe(false);
+      expect(iPhone.isAndroid).not.toBeTruthy();
+      expect(iPhone.isIphone).toBeTruthy();
+      iPhone.powerOn();
+      expect(iPhone.isPowerOn).toBeTruthy();
+      iPhone.powerOff();
+      expect(iPhone.isPowerOn).not.toBeTruthy();
     });
 
-    it("The Trailer should have speed 0 km/h until you put `the pedal to the metal`", function() {
-      var man  = new Car('MAN', 'Truck', 'trailer');
-      expect(man.speed).toBe('0 km/h');
-      man.drive(7);
-      expect(man.speed).toBe('77 km/h');
+    it("The Phone should charge when plugged in with the function 'charge'", function() {
+      var lumia = new Phone("Nokia","Lumia 520");
+      expect(lumia.isCharging).not.toBeTruthy();
+      lumia.charge();
+      expect(lumia.isCharging).toBe(true);
     });
 
     it("The car drive function should return the instance of the Car class", function() {

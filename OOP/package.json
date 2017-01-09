@@ -1,0 +1,26 @@
+{
+  "name": "oop-labs",
+  "version": "1.0.0",
+  "description": "Implementing a real-life model with OOP using Car class as guide",
+  "main": "app/library.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "a": "^2.1.0",
+    "chai": "^3.5.0",
+    "jasmine": "^2.5.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/COOPROTON/Home-Day-1/tree/master/OOP"
+  },
+  "author": "Bolaji Olajide <cooproton@gmail.com> (http://github.com/cooproton)",
+  "license": "MIT"
+}
